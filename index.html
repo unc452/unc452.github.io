@@ -2,22 +2,104 @@
 <html>
 <head>
     <style>
+        /* 배경 및 텍스트 애니메이션 */
         body {
             background-color: rgb(248, 1, 1); /* 배경색 */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth; /* 부드러운 스크롤 이동 */
         }
         h1 {
             color: rgb(255, 217, 0); /* 글자 색깔 */
-            font-size: 100px; /* 글자 크기 */
+            font-size: 50px; /* 글자 크기 */
+            animation: bounce 2s infinite; /* 애니메이션 적용 */
+            text-align: center; /* 제목도 가운데 정렬 */
         }
-        .highlight { /* 클래스 이름으로 스타일 지정 */
-            color: blue; /* 텍스트 색상 */
+        .highlight {
+            color: blue;
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
         }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        /* 상단바 스타일 */
+        .navbar {
+            background-color: #ff00bf;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #ffd900;
+            color: black;
+        }
+        /* 다운로드 링크 감싸는 div */
+        .center-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* 섹션 스타일 */
+        section {
+            height: 100vh; /* 각 섹션을 화면 전체 크기로 */
+            padding-top: 60px; /* 상단바와 겹치지 않게 여백 추가 */
+            text-align: center;
+        }
+        #home { background-color: lightblue; }
+        #download { background-color: lightgreen; }
+        #about { background-color: lightcoral; }
     </style>
 </head>
 <body>
+<<<<<<< HEAD
+    <!-- 상단바 -->
+    <div class="navbar">
+        <a href="#home">HOME</a>
+        <a href="#download">DOWNLOAD</a>
+        <a href="#about">ABOUT</a>
+    </div>
+
+    <!-- 각 섹션 추가 -->
+    <section id="home">
+        <h1>🏠 제임스 월드에 오신 걸 환영하지 않습니다.</h1>
+        <img src="제임스.png" alt="제임스 일러스트" width="500" height="500" style="display: block; margin: 20px auto;">
+    </section>
+
+    <section id="download">
+        <h1>📥 다운로드 섹션</h1>
+        <p>제임스를 다운로드하려면 아래 버튼을 클릭하세요!</p>
+        <div class="center-text">
+            <a href="https://drive.google.com/file/d/1K6d7XbCBw3cOPLMonfvt4Xa-yemGMVCL/view" class="highlight">제임스 다운로드 하러 가기</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1>👨💻 제임스 소개</h1>
+        <p>제임스는 3음계 + 2음색으로 이루어진 다색다음계 음원으로, 외계 행성에서 인류를 지배하러 온 무시무시한 외계인입니다!<br>제임스 행성의 높은 예술 수준과 본인의 뛰어난 외모로 지구정복을 꿈꾸는 제임스. 과연 성공 할 수 있을까요?</p>
+    </section>
+=======
     <img src="제임스.png" alt="예쁜 이미지" width="700" height="700">
     <h1>제임스 월드에 오신 걸 환영하지 않습니다.</h1>
     <p>제임스를 다운로드 해보세요!</p>
     <a href="https://drive.google.com/file/d/1K6d7XbCBw3cOPLMonfvt4Xa-yemGMVCL/view" class="highlight">제임스 다운로드 하러 가기</p> 
+>>>>>>> d5fc53f020885f065e76e3b442c200b6ffaab7b7
 </body>
 </html>
